@@ -44,10 +44,32 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -102,14 +124,31 @@
     <Content Include="Images\PerfilUsuario.png" />
     <Content Include="Images\PowerButton.png" />
     <Content Include="Images\Transacciones.png" />
+    <Content Include="Images\TransaccionFacultad.png" />
+    <Content Include="Images\TransaccionPerfil.png" />
     <Content Include="Images\Usuario.png" />
     <Content Include="Images\UsuarioFacultades.png" />
     <Content Include="Images\UsuarioOficina.png" />
+    <Content Include="Images\UsuarioPerfil.png" />
     <Content Include="Images\UsuarioPerfiles.png" />
     <Content Include="Images\VerArchivo.png" />
     <Content Include="Images\VerLinea.png" />
     <Content Include="Inicio.aspx" />
+    <Content Include="Scripts\CambioPassword.js" />
     <Content Include="Scripts\ej2.min.js" />
+    <Content Include="Scripts\Empresas.js" />
+    <Content Include="Scripts\Facultades.js" />
+    <Content Include="Scripts\GruposOpciones.js" />
+    <Content Include="Scripts\Oficinas.js" />
+    <Content Include="Scripts\Perfiles.js" />
+    <Content Include="Scripts\Transacciones.js" />
+    <Content Include="Scripts\TransaccionFacultad.js" />
+    <Content Include="Scripts\TransaccionPerfil.js" />
+    <Content Include="Scripts\UsuarioFacultad.js" />
+    <Content Include="Scripts\UsuarioOficina.js" />
+    <Content Include="Scripts\UsuarioPerfil.js" />
+    <Content Include="Scripts\Usuarios.js" />
+    <Content Include="Styles\Custom-Cards.css" />
     <Content Include="Styles\Custom-Grid-Font.css" />
     <Content Include="Styles\Custom-Grid.css" />
     <Content Include="Styles\Custom-Inicio.css" />
@@ -118,11 +157,18 @@
     <Content Include="Styles\Custom-Toolbar.css" />
     <Content Include="Styles\font-awesome.min.css" />
     <Content Include="Styles\material.css" />
+    <Content Include="Views\CambioPassword.aspx" />
     <Content Include="Views\Empresas.aspx" />
     <Content Include="Views\Facultades.aspx" />
     <Content Include="Views\GruposOpciones.aspx" />
+    <Content Include="Views\Oficinas.aspx" />
     <Content Include="Views\Perfiles.aspx" />
     <Content Include="Views\Transacciones.aspx" />
+    <Content Include="Views\TransaccionFacultad.aspx" />
+    <Content Include="Views\TransaccionPerfil.aspx" />
+    <Content Include="Views\UsuarioFacultad.aspx" />
+    <Content Include="Views\UsuarioOficina.aspx" />
+    <Content Include="Views\UsuarioPerfil.aspx" />
     <Content Include="Views\Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -134,6 +180,7 @@
     <Compile Include="Consola.aspx.designer.cs">
       <DependentUpon>Consola.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Cookies\UserInfoCookieController.cs" />
     <Compile Include="Controllers\Empresas\EmpresasController.cs" />
     <Compile Include="Controllers\Facultades\FacultadesController.cs" />
     <Compile Include="Controllers\GruposOpciones\GruposOpcionesController.cs" />
@@ -145,6 +192,8 @@
     <Compile Include="Controllers\TransaccionPerfil\TransaccionPerfilController.cs" />
     <Compile Include="Controllers\UsuarioFacultad\UsuarioFacultadController.cs" />
     <Compile Include="Controllers\UsuarioOficina\UsuarioOficinaController.cs" />
+    <Compile Include="Controllers\UsuarioPerfil\UsuarioPerfilController.cs" />
+    <Compile Include="Controllers\Usuarios\CambioPasswordController.cs" />
     <Compile Include="Controllers\Usuarios\UsuariosController.cs" />
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
@@ -153,6 +202,7 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Cookies\IUserInfoCookieController.cs" />
     <Compile Include="Interfaces\Empresas\IEmpresasController.cs" />
     <Compile Include="Interfaces\Empresas\IEmpresasService.cs" />
     <Compile Include="Interfaces\Facultades\IFacultadesController.cs" />
@@ -177,8 +227,10 @@
     <Compile Include="Interfaces\UsuarioOficina\IUsuarioOficinaService.cs" />
     <Compile Include="Interfaces\UsuarioPerfil\IUsuarioPerfilController.cs" />
     <Compile Include="Interfaces\UsuarioPerfil\IUsuarioPerfilService.cs" />
+    <Compile Include="Interfaces\Usuarios\ICambioPasswordController.cs" />
     <Compile Include="Interfaces\Usuarios\IUsuariosController.cs" />
     <Compile Include="Interfaces\Usuarios\IUsuariosService.cs" />
+    <Compile Include="Interfaces\Utils\ICifradoService.cs" />
     <Compile Include="Models\Empresas.cs" />
     <Compile Include="Models\Facultades.cs" />
     <Compile Include="Models\GruposOpciones.cs" />
@@ -190,6 +242,7 @@
     <Compile Include="Models\TransaccionesUsuario.cs" />
     <Compile Include="Models\TransaccionFacultad.cs" />
     <Compile Include="Models\TransaccionPerfil.cs" />
+    <Compile Include="Models\UserInfoCookie.cs" />
     <Compile Include="Models\UsuarioFacultad.cs" />
     <Compile Include="Models\UsuarioGrupoOpciones.cs" />
     <Compile Include="Models\UsuarioOficina.cs" />
@@ -209,6 +262,14 @@
     <Compile Include="Services\UsuarioOficina\UsuarioOficinaService.cs" />
     <Compile Include="Services\UsuarioPerfil\UsuarioPerfilService.cs" />
     <Compile Include="Services\Usuarios\UsuariosService.cs" />
+    <Compile Include="Services\Utils\CifradoService.cs" />
+    <Compile Include="Views\CambioPassword.aspx.cs">
+      <DependentUpon>CambioPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CambioPassword.aspx.designer.cs">
+      <DependentUpon>CambioPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Empresas.aspx.cs">
       <DependentUpon>Empresas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,6 +291,13 @@
     <Compile Include="Views\GruposOpciones.aspx.designer.cs">
       <DependentUpon>GruposOpciones.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Oficinas.aspx.cs">
+      <DependentUpon>Oficinas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Oficinas.aspx.designer.cs">
+      <DependentUpon>Oficinas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Perfiles.aspx.cs">
       <DependentUpon>Perfiles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,6 +311,41 @@
     </Compile>
     <Compile Include="Views\Transacciones.aspx.designer.cs">
       <DependentUpon>Transacciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransaccionFacultad.aspx.cs">
+      <DependentUpon>TransaccionFacultad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransaccionFacultad.aspx.designer.cs">
+      <DependentUpon>TransaccionFacultad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransaccionPerfil.aspx.cs">
+      <DependentUpon>TransaccionPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransaccionPerfil.aspx.designer.cs">
+      <DependentUpon>TransaccionPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsuarioFacultad.aspx.cs">
+      <DependentUpon>UsuarioFacultad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UsuarioFacultad.aspx.designer.cs">
+      <DependentUpon>UsuarioFacultad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsuarioOficina.aspx.cs">
+      <DependentUpon>UsuarioOficina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UsuarioOficina.aspx.designer.cs">
+      <DependentUpon>UsuarioOficina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsuarioPerfil.aspx.cs">
+      <DependentUpon>UsuarioPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UsuarioPerfil.aspx.designer.cs">
+      <DependentUpon>UsuarioPerfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>

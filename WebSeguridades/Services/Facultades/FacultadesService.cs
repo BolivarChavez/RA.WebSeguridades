@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.Facultades
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "Facultades/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "Facultades/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(facultad);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.Facultades
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "Facultades/Consulta/{0}", idFacultad.ToString().Trim()));
@@ -82,7 +82,7 @@ namespace WebSeguridades.Services.Facultades
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "Facultades/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "Facultades/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(facultad);

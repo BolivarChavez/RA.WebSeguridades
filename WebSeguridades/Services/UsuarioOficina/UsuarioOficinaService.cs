@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.UsuarioOficina
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioOficina/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioOficina/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);
@@ -37,10 +37,10 @@ namespace WebSeguridades.Services.UsuarioOficina
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
-            var uri = new Uri(string.Format(url + "Oficinas/Consulta/{0}/{1}", idUsuario.ToString().Trim(), idEmpresa.ToString().Trim()));
+            var uri = new Uri(string.Format(url + "UsuarioOficina/Consulta/{0}/{1}", idUsuario.ToString().Trim(), idEmpresa.ToString().Trim()));
 
             //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", stoken);
             var response = client.GetAsync(uri).Result;
@@ -83,7 +83,7 @@ namespace WebSeguridades.Services.UsuarioOficina
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioOficina/Eliminacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioOficina/Eliminacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);
@@ -101,7 +101,7 @@ namespace WebSeguridades.Services.UsuarioOficina
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioOficina/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioOficina/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);

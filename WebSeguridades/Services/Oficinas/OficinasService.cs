@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.Oficinas
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "Oficinas/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "Oficinas/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(oficina);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.Oficinas
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "Oficinas/Consulta/{0}/{1}", idEmpresa.ToString().Trim(), idOficina.ToString().Trim()));
@@ -90,7 +90,7 @@ namespace WebSeguridades.Services.Oficinas
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "Oficinas/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "Oficinas/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(oficina);

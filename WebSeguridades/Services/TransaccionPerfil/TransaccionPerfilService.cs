@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.TransaccionPerfil
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "TransaccionPerfil/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "TransaccionPerfil/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(perfil);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.TransaccionPerfil
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "TransaccionPerfil/Consulta/{0}", idPerfil.ToString().Trim()));
@@ -83,7 +83,7 @@ namespace WebSeguridades.Services.TransaccionPerfil
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "TransaccionPerfil/Eliminacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "TransaccionPerfil/Eliminacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(perfil);
@@ -101,7 +101,7 @@ namespace WebSeguridades.Services.TransaccionPerfil
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "TransaccionPerfil/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "TransaccionPerfil/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(perfil);

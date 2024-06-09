@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.GruposOpciones
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "GruposOpciones/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "GruposOpciones/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(grupoOpcion);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.GruposOpciones
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "GruposOpciones/Consulta/{0}", idGrupoOpcion.ToString().Trim()));
@@ -83,7 +83,7 @@ namespace WebSeguridades.Services.GruposOpciones
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "GruposOpciones/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "GruposOpciones/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(grupoOpcion);

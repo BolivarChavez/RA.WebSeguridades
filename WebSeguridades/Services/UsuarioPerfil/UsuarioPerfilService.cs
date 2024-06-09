@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.UsuarioPerfil
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioPerfil/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioPerfil/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.UsuarioPerfil
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "UsuarioPerfil/Consulta/{0}", idUsuario.ToString().Trim()));
@@ -82,7 +82,7 @@ namespace WebSeguridades.Services.UsuarioPerfil
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioPerfil/Eliminacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioPerfil/Eliminacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);
@@ -100,7 +100,7 @@ namespace WebSeguridades.Services.UsuarioPerfil
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioPerfil/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioPerfil/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);

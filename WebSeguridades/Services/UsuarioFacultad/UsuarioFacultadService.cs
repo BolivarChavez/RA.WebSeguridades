@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.UsuarioFacultad
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioFacultad/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioFacultad/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.UsuarioFacultad
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "UsuarioFacultad/Consulta/{0}/{1}", idUsuario.ToString().Trim(), idTransaccion.ToString().Trim()));
@@ -83,7 +83,7 @@ namespace WebSeguridades.Services.UsuarioFacultad
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioFacultad/Eliminacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioFacultad/Eliminacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);
@@ -101,7 +101,7 @@ namespace WebSeguridades.Services.UsuarioFacultad
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "UsuarioFacultad/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "UsuarioFacultad/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(usuario);

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using WebSeguridades.Interfaces.Login;
 using WebSeguridades.Models;
 using WebSeguridades.Services.Login;
 using WebSeguridades.Services.Usuarios;
+using WebSeguridades.Services.Utils;
 
 namespace WebSeguridades.Controllers.Login
 {
@@ -14,12 +16,16 @@ namespace WebSeguridades.Controllers.Login
         {
             LoginService _LoginService = new LoginService();
             UsuariosService _OperadorService = new UsuariosService();
+            CifradoService _cifrado = new CifradoService();
+            string passwordCifrado;
             string respvalida;
 
             respvalida = _LoginService.ValidaLogin(login);
 
             if (respvalida == "")
             {
+                passwordCifrado = _cifrado.Encriptar(login.password.ToLower());
+                login.password = passwordCifrado;
                 var retorno = _LoginService.LoginUsuario(login);
 
                 if (retorno.retorno == 0)
@@ -34,6 +40,7 @@ namespace WebSeguridades.Controllers.Login
                     }
 
                     HttpCookie userInfo = new HttpCookie("userInfo");
+                    userInfo["Empresa"] = ConfigurationManager.AppSettings["CodigEmpresa"].ToString();
                     userInfo["Usuario"] = operador.ToList().FirstOrDefault().us_login.Trim();
                     userInfo["Nombre"] = operador.ToList().FirstOrDefault().us_nombre.Trim(); 
                     userInfo["Token"] = retorno.descripcion;

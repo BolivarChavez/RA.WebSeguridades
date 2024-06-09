@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.Transacciones
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "Transacciones/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "Transacciones/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(transaccion);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.Transacciones
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "Transacciones/Consulta/{0}", idTransaccion.ToString().Trim()));
@@ -85,7 +85,7 @@ namespace WebSeguridades.Services.Transacciones
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "Transacciones/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "Transacciones/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(transaccion);

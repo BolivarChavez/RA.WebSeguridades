@@ -15,7 +15,7 @@ namespace WebSeguridades.Services.TransaccionFacultad
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "TransaccionFacultad/Actualizacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "TransaccionFacultad/Actualizacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(transaccion);
@@ -37,7 +37,7 @@ namespace WebSeguridades.Services.TransaccionFacultad
             string respuesta = string.Empty;
             string errorContent = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString();
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString();
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var uri = new Uri(string.Format(url + "TransaccionFacultad/Consulta/{0}", idTransaccion.ToString().Trim()));
@@ -82,7 +82,7 @@ namespace WebSeguridades.Services.TransaccionFacultad
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "TransaccionFacultad/Eliminacion";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "TransaccionFacultad/Eliminacion";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(transaccion);
@@ -100,7 +100,7 @@ namespace WebSeguridades.Services.TransaccionFacultad
             string url = string.Empty;
             string _key = string.Empty;
 
-            url = ConfigurationManager.AppSettings["UrlOpciones"].ToString() + "TransaccionFacultad/Ingreso";
+            url = ConfigurationManager.AppSettings["UrlLogin"].ToString() + "TransaccionFacultad/Ingreso";
             _key = ConfigurationManager.AppSettings["Llave_cifrado"].ToString();
 
             var json = JsonConvert.SerializeObject(transaccion);

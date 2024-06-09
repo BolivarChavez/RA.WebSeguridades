@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using WebSeguridades.Controllers.Login;
+using WebSeguridades.Models;
 
 namespace WebSeguridades
 {
@@ -11,7 +9,31 @@ namespace WebSeguridades
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+                InitializedView();
+        }
 
+        private void InitializedView()
+        {
+            UserId.Value = "";
+            UserPassword.Value = "";
+        }
+
+        protected void BtnLogin_ServerClick(object sender, EventArgs e)
+        {
+            LoginController _LoginController = new LoginController();
+            string[] respuesta;
+
+            LoginUsuario login = new LoginUsuario
+            {
+                usuario = UserId.Value.ToString().Trim(),
+                password = UserPassword.Value.ToString().Trim()
+            };
+
+            System.Threading.Thread.Sleep(1000);
+            respuesta = _LoginController.ProcesaLogin(login).Split('|');
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + respuesta[3].Trim() + "'); window.location ='" + respuesta[4].Trim() + "';", true);
         }
     }
 }

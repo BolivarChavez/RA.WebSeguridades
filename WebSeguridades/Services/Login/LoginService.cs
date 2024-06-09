@@ -35,6 +35,7 @@ namespace WebSeguridades.Services.Login
 
         public string ValidaLogin(LoginUsuario login)
         {
+            string usuarioAdministrador = ConfigurationManager.AppSettings["UserAdmin"].ToString().Trim();
             string respuesta = string.Empty;
 
             if (login.usuario.Trim().Length <= 1)
@@ -50,6 +51,11 @@ namespace WebSeguridades.Services.Login
             if (!login.usuario.Trim().All(char.IsLetter))
             {
                 respuesta = "El nombre de usuario contiene caracteres no validos";
+            }
+
+            if (usuarioAdministrador != login.usuario.Trim())
+            {
+                respuesta = "El nombre de usuario del administrador no corresponde al que esta configurado en la aplicacion";
             }
 
             return respuesta;
