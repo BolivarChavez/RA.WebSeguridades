@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using WebSeguridades.Interfaces.Usuarios;
 using WebSeguridades.Services.Usuarios;
+using WebSeguridades.Services.Utils;
 
 namespace WebSeguridades.Controllers.Usuarios
 {
@@ -23,6 +24,10 @@ namespace WebSeguridades.Controllers.Usuarios
         public string Ingreso(Models.Usuarios usuario)
         {
             UsuariosService _usuariosService = new UsuariosService();
+            CifradoService _cifrado = new CifradoService();
+
+            string passwordCifrado = _cifrado.Encriptar(usuario.us_password.Trim());
+            usuario.us_password = passwordCifrado;
 
             return _usuariosService.Ingreso(usuario);
         }
