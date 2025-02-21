@@ -155,10 +155,12 @@
     <Content Include="Styles\Custom-Menu.css" />
     <Content Include="Styles\Custom-Opciones.css" />
     <Content Include="Styles\Custom-Toolbar.css" />
+    <Content Include="Styles\ErrorAccesoOpcion.css" />
     <Content Include="Styles\font-awesome.min.css" />
     <Content Include="Styles\material.css" />
     <Content Include="Views\CambioPassword.aspx" />
     <Content Include="Views\Empresas.aspx" />
+    <Content Include="Views\ErrorAccesoOpcion.aspx" />
     <Content Include="Views\Facultades.aspx" />
     <Content Include="Views\GruposOpciones.aspx" />
     <Content Include="Views\Oficinas.aspx" />
@@ -276,6 +278,13 @@
     </Compile>
     <Compile Include="Views\Empresas.aspx.designer.cs">
       <DependentUpon>Empresas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorAccesoOpcion.aspx.cs">
+      <DependentUpon>ErrorAccesoOpcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ErrorAccesoOpcion.aspx.designer.cs">
+      <DependentUpon>ErrorAccesoOpcion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Facultades.aspx.cs">
       <DependentUpon>Facultades.aspx</DependentUpon>

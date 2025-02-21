@@ -68,7 +68,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Mantenimiento de Empresas</h5>
                                     <p class="card-text">Configuracion de la información general de la empresa, como nombre, RUC, direccion, etc.</p>
-                                    <a href="Views/Empresas.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('Empresas.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Mantenimiento de Oficinas</h5>
                                     <p class="card-text">Configuracion de las oficinas asociadas con una empresa. Se registra la información general de las oficinas, como nombre, direccion, etc.</p>
-                                    <a href="Views/Oficinas.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('Oficinas.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Mantenimiento de Facultades</h5>
                                     <p class="card-text">Configuracion de las facultades o acciones relacionadas a una transacción. Estas facultades se asignan a los usuarios para determinar que acciones pueden ejecutar.</p>
-                                    <a href="Views/Facultades.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('Facultades.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Mantenimiento de Grupos de Opciones</h5>
                                     <p class="card-text">Configuracion de grupos de opciones. Esto sirve para agrupar las opciones o transacciones asignadas a un usuario según un grupo o categoría.</p>
-                                    <a href="Views/GruposOpciones.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('GruposOpciones.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Mantenimiento de Perfiles</h5>
                                     <p class="card-text">Configuracion de los perfiles de usuarios. Estos perfiles se utilizan para relacionar las transacciones autorizadas que cada uno de ellos puede ejecutar.</p>
-                                    <a href="Views/Perfiles.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('Perfiles.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Mantenimiento de Transacciones</h5>
                                     <p class="card-text">Configuracion de las transacciones autorizadas. Las transacciones incluyen opciones de usuario o acciones específicas a realizarce dentro de la aplicación.</p>
-                                    <a href="Views/Transacciones.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('Transacciones.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Facultades asociadas a Transacciones</h5>
                                     <p class="card-text">De las facultades que se encuentren definidas, se asocian a cada transacción aquellas facultades que dicha transacción podrá utilizar.</p>
-                                    <a href="Views/TransaccionFacultad.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('TransaccionFacultad.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Transacciones asociadas a Perfiles</h5>
                                     <p class="card-text">De los perfiles que se encuentran definidos, se asocian a cada perfil aquellas transacciones que dicho perfil podrá utilizar.</p>
-                                    <a href="Views/TransaccionPerfil.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('TransaccionPerfil.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Mantenimiento de Usuarios</h5>
                                     <p class="card-text">Configuracion de la información del usuario. Incluye el nombre, el nombre de ingreso, contraseña, etc.</p>
-                                    <a href="Views/Usuarios.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('Usuarios.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Oficinas asociadas a Usuarios</h5>
                                     <p class="card-text">Se relacionan al usuario las oficinas a las que pueda realizar labores.</p>
-                                    <a href="Views/UsuarioOficina.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('UsuarioOficina.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Perfiles asociados a Usuarios</h5>
                                     <p class="card-text">Se relacionan al usuario los perfiles que contienen las transacciones que el usuario puede ejecutar.</p>
-                                    <a href="Views/UsuarioPerfil.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('UsuarioPerfil.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Facultades asociadas a Usuarios</h5>
                                     <p class="card-text">Se relacionan al usuario las facultades que tiene autorizado ejecutar en las transacciones de sus perfiles asociados.</p>
-                                    <a href="Views/UsuarioFacultad.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('UsuarioFacultad.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@
                                   <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Cambio de Contraseña</h5>
                                     <p class="card-text">Permite ingresar una nueva contraseña para un usuario.</p>
-                                    <a href="Views/CambioPassword.aspx" target="_blank" class="btn btn-primary mt-auto align-self-start">Acceder</a>
+                                    <a href="#" class="btn btn-primary mt-auto align-self-start" onclick="EjecutaOpcion('CambioPassword.aspx')">Acceder</a>
                                   </div>
                                 </div>
                             </div>
@@ -217,10 +217,16 @@
         </div>
     </form>
     <script type="text/javascript">
+        var windows = [];
+
         function CloseTabWindow() {
             for (var i = 0; i < windows.length; i++) {
                 windows[i].close()
             }
+        }
+
+        function EjecutaOpcion(pagina) {
+            windows.push(window.open('Views/' + pagina, pagina));
         }
     </script>
 </body>
